@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.inatel.cdg</groupId>
-    <artifactId>aula-08</artifactId>
+    <artifactId>aula-github-actions-S107</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>aula-08</name>
+    <name>aula-github-actions-S107</name>
     <description>Add project description here</description>
 
     <properties>

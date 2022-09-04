@@ -1,4 +1,4 @@
-package br.inatel.cdg.aula_08.compras;
+package br.inatel.cdg.compras;
 
 import java.util.ArrayList;
 import java.util.List;
