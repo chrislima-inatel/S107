@@ -11,8 +11,8 @@ public class TesteCarrinhoCompra {
 	@Test
 	public void testSomaTotalCompra() throws NumeroNegativoException {
 
-		Brownie bw1 = new Brownie("Brownie Nutella", 6, 150);
-		Brownie bw2 = new Brownie("Brownie Doce de Leite", 4, 100);
+		Brownie bw1 = new Brownie("Brownie Nutella", 6, 250);
+		Brownie bw2 = new Brownie("Brownie Doce de Leite", 4, 1000);
 
 		CarrinhoCompra carrinho = new CarrinhoCompra();
 
