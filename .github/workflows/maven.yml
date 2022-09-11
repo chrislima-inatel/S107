@@ -27,16 +27,3 @@ jobs:
       run: |
         cd Aula-GitHub-Actions
         mvn clean test
-        
-
-  uploadArtifacts:
-
-    needs: test
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Armazenar relatorios
-        run: |
-          cd Aula-GitHub-Actions
-          mvn clean test
