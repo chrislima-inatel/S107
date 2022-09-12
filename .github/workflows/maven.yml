@@ -26,4 +26,10 @@ jobs:
     - name: Teste com maven
       run: |
         cd Aula-GitHub-Actions
-        mvn clean test
+        mvn clean test site
+
+    - name: Upload artefatos de teste
+      uses: actions/upload-artifact@v3
+      with:
+        name: relatorio-testes
+        path: Aula-GitHub-Actions/target/site/
