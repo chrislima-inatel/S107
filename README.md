@@ -54,3 +54,10 @@ Essa receita é chamada de Dockerfile. Tudo que precisamos para criar o nosso co
 5. RUN executa alguma comando no container
 
 Para mais comandos e explicações: https://docs.docker.com/engine/reference/builder/
+
+
+## Como enviar uma imagem para o dockerhub e compartilhar?
+
+Utilize o tutorial do docker: https://docs.docker.com/get-started/04_sharing_app/
+
+
