@@ -25,7 +25,7 @@ docker ps
 3. Listar imagens docker na máquina:
 
 ```
-docker images
+docker image ls
 ```
 
 4. Download de uma imagem do docker hub:
