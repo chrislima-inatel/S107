@@ -34,7 +34,7 @@ docker images
 docker pull nome_da_imagem
 ```
 
-5. Download de uma imagem do docker hub:
+5. Construir uma imagem docker com um dockerfile:
 
 ```
 docker build --tag="tag_para_imagem" diretorio_dockerfile
