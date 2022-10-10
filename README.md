@@ -42,16 +42,16 @@ docker build --tag="tag_para_imagem" diretorio_dockerfile
 
 ## Dockerfile
 
-É possível ter muitas necessidades específicas para criação de uma aplicação. Nesse caso, utilizamos uma "receita de bola" que especifica todas essas necessidades.
+É possível ter muitas necessidades específicas para criação de uma aplicação. Nesse caso, utilizamos uma "receita de bolo" que especifica todas essas necessidades.
 Essa receita é chamada de Dockerfile. Tudo que precisamos para criar o nosso container específico, se encontra nesse arquivo.
 
 ## Comandos dockerfile
 
 1. Dockerfile é um arquivo que deve ser versionado
 2. FROM: Define nossa imagem docker base.
-3. ENV define variáveis de ambiente.
-4. USER define o nível de usuário para executar alguma função.
-5. RUN executa alguma comando no container
+3. ENV: define variáveis de ambiente.
+4. USER: define o nível de usuário para executar alguma função.
+5. RUN: executa alguma comando no container
 
 Para mais comandos e explicações: https://docs.docker.com/engine/reference/builder/
 
