@@ -60,4 +60,6 @@ Para mais comandos e explicações: https://docs.docker.com/engine/reference/bui
 
 Utilize o tutorial do docker: https://docs.docker.com/get-started/04_sharing_app/
 
+## Jenkinsfile
 
+Documentação oficial: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
