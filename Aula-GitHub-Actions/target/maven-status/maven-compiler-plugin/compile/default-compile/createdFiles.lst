@@ -1,0 +1,4 @@
+br/inatel/cdg/compras/Brownie.class
+br/inatel/cdg/compras/CupomDesconto.class
+br/inatel/cdg/compras/CarrinhoCompra.class
+br/inatel/cdg/compras/NumeroNegativoException.class
