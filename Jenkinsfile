@@ -25,9 +25,15 @@ pipeline {
                    archiveArtifacts 'Aula-GitHub-Actions/target/site/'
             }
         }
-        stage('Deploy') {
+        stage('Notification') {
             steps {
-                echo 'Deploying....'
+                echo 'Sending email....'
+                sh '''
+                    cd scripts/
+                    ./shell.sh
+                   '''
+
+
             }
         }
     }
