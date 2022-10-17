@@ -62,4 +62,7 @@ Utilize o tutorial do docker: https://docs.docker.com/get-started/04_sharing_app
 
 ## Jenkinsfile
 
+Jenkinsfile é um arquivo que substitui a criação de jobs na interface gráfica do Jenkins. É a maneira mais recomendada para criar Pipelines no Jenkins. É possível colocar o arquivo na raiz de um repositório (Jenkinsfile) que possibilita a criação de um Pipeline com código (Pipeline como código - conceito de infraestrutura como código). Essa técnica nos permite versionar e controlar o fluxo.
+
+
 Documentação oficial: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
