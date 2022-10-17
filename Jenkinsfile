@@ -18,6 +18,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                sh '''
+                    cd Aula-GitHub-Actions
+                    mvn clean test site
+                   '''
             }
         }
         stage('Deploy') {
