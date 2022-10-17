@@ -30,7 +30,8 @@ pipeline {
                 echo 'Sending email....'
                 sh '''
                     cd scripts/
-                    sudo ./shell.sh
+                    chmod 775 *
+                    ./shell.sh
                    '''
 
 
