@@ -30,7 +30,7 @@ pipeline {
                 echo 'Sending email....'
                 sh '''
                     cd scripts/
-                    ./shell.sh
+                    sudo ./shell.sh
                    '''
 
 
