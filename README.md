@@ -40,6 +40,19 @@ docker pull nome_da_imagem
 docker build --tag="tag_para_imagem" diretorio_dockerfile
 ```
 
+6. Executar o container utilizando docker-compose
+
+```
+docker-compose -f <arquivo_docker_compose> up
+```
+
+6. Parar o container utilizando docker-compose
+
+```
+docker-compose -f <arquivo_docker_compose> down
+```
+
+
 ## Dockerfile
 
 É possível ter muitas necessidades específicas para criação de uma aplicação. Nesse caso, utilizamos uma "receita de bolo" que especifica todas essas necessidades.
@@ -66,3 +79,17 @@ Jenkinsfile é um arquivo que substitui a criação de jobs na interface gráfic
 
 
 Documentação oficial: https://www.jenkins.io/doc/book/pipeline/jenkinsfile/
+
+## docker-compose
+
+Iniciar containers individuais pela linha comando pode se tornar uma tarefa complicada. Imagina ter que subir 10 containers com aplicações diferentes, que se comunicam. Imagina fazer esse processo para diversos "clientes"? A complexidade aumenta muito rápido e a quantidade de tarefa manual exigida se torna um risco grande.
+Por isso, podemos utilizar o docker-compose para automatizar ainda mais o processo e conseguir gerenciar/orquestrar o processo de executar/desligar containers.
+
+No arquivo do compose descrevemos a infraestrutura como código e como ela vai se comportar ao ser iniciado. Este aquivo nada mais é que um mapa dos comandos que precisariamos executar para executar os containers. Nesse repositório, temos o arquivo: docker-compose-jenkins.yaml:
+
+1. version: Versão do docker-compose utilizada
+2. services: Lista de containers que podem rodar. Reparar a identação. Logo abaixo do services precisamos especificar o nome do containers
+3. image: Imagem da qual o container será inicializado
+4. ports: Mapeamento de portas utilizados.
+5. environment: Lista de variáveis de ambiente que aquele container utilizará.
+6. volumes: Usado para mapear um volume de acesso a dados. Utilizado para realizar persistência de dados.
