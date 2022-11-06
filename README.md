@@ -93,3 +93,5 @@ No arquivo do compose descrevemos a infraestrutura como código e como ela vai s
 4. ports: Mapeamento de portas utilizados.
 5. environment: Lista de variáveis de ambiente que aquele container utilizará.
 6. volumes: Usado para mapear um volume de acesso a dados. Utilizado para realizar persistência de dados.
+
+Documentação oficial: https://docs.docker.com/compose/
