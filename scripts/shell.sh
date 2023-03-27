@@ -1,2 +1,5 @@
 ls
-sudo cd Aula-GitHub-Actions
+cd Aula-GitHub-Actions
+ls
+echo "HAHAHAHAHAH"
+echo "Mandando e-mail com mail do linux" | mail -s "meu email deu tudo certo" christopher@inatel.br
