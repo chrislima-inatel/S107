@@ -53,6 +53,7 @@ jobs:
 
     - name: Build with maven
       run: |
+        cd Aula-GitHub-Actions
         mvn clean install
 
 
