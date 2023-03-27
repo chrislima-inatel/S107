@@ -57,6 +57,14 @@ jobs:
         cd Aula-GitHub-Actions
         mvn clean install
 
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: arquivo jar
+        path: Aula-GitHub-Actions/target/*.jar
+
+
+
 
 
 
