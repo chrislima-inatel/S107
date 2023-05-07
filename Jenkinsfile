@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Notification') {
             steps {
-                echo 'Sending email....'
+                echo 'Sending email notification....'
                 sh '''
                     cd scripts/
                     chmod 775 *
