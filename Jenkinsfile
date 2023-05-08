@@ -33,6 +33,7 @@ pipeline {
                 echo 'Notifications'
                 sh '''
                     cd scripts/
+                    chmod 777 *
                     ./shell.sh
                    '''
             }
