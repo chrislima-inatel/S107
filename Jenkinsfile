@@ -9,6 +9,10 @@ pipeline {
                 sh 'java --version'
                 sh 'ls'
                 sh 'pwd'
+                sh '''
+                    cd Aula-GitHub-Actions
+                    mvn clean install
+                   '''
             }
         }
     }
