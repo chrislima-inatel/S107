@@ -23,6 +23,18 @@ pipeline {
                     cd Aula-GitHub-Actions
                     mvn clean test site
                    '''
+                   archiveArtifacts 'Aula-GitHub-Actions/target/site/'
+            }
+
+        }
+
+        stage ('Notifications'){
+            steps {
+                echo 'Notifications'
+                sh '''
+                    cd scripts/
+                    ./shell.sh
+                   '''
             }
 
         }
