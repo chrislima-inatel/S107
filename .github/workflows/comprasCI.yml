@@ -63,6 +63,17 @@ jobs:
         name: jar
         path: Aula-GitHub-Actions/target/*.jar
 
+  notificacao:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Executa comandos
+      uses: actions/checkout@v3
+    - run: sh scripts/shell.sh
+ 
+        
+
 
       
 
