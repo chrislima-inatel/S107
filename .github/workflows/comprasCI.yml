@@ -67,6 +67,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      EMAIL_LIST: chris.souzalima@outlook.com
+
     steps:
     - name: Executa comandos
       uses: actions/checkout@v3
