@@ -13,7 +13,11 @@ pipeline {
                 sh '''
                    cd Aula-GitHub-Actions
                    mvn clean install
+                   cd ${WORKSPACE}
+                   ls
                    '''
+                   archiveArtifacts 'Aula-GitHub-Actions/target/'
+
             }
 
         }
