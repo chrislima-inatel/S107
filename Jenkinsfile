@@ -13,6 +13,7 @@ pipeline {
                     cd Aula-GitHub-Actions
                     mvn clean install
                    '''
+                echo "HAHAHAHAH"
             }
         }
 
