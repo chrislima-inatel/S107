@@ -36,7 +36,7 @@ pipeline {
                 echo 'Notification...'
                 sh '''
                    cd scripts
-                   ./jenkins.sh
+                   ./shell.sh
                    '''
             }
 
