@@ -32,3 +32,13 @@
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: root
         ME_CONFIG_MONGODB_SERVER: mongodb
+
+    # O código abaixo é usado para subir um outro container a partir de um dockerfile.
+    # Mude o nome e porta para refletir seu ambiente.
+    
+    # web:
+    #   build:
+    #     context: ./docker  
+    #     dockerfile: dockerfile  
+    #   ports:
+    #     - "8082:8082"
