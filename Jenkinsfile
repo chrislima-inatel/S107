@@ -22,31 +22,7 @@ pipeline {
 
         }
 
-        stage('Test'){
-
-            steps {
-                echo 'Testing...'
-                sh '''
-                   cd Aula-GitHub-Actions
-                   mvn clean test site
-                   '''
-            }
-
-        }
-
-        stage('Notification'){
-
-            steps {
-                echo 'Notification...'
-                sh '''
-                   cd scripts
-                   chmod 775 *
-                   ./jenkins.sh
-                   '''
-            }
-
-        }
-
+       
     }
 
 }
