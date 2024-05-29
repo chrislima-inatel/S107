@@ -2,7 +2,7 @@
   version: '3.8'
   services:
     jenkins_maven:
-      image: chrisslima/s107-jenkins-maven
+      image: chrisslima/s107_jenkins_v2
       container_name: jenkins
       privileged: true
       user: root
@@ -11,7 +11,6 @@
        - 50000:50000
       volumes:
         - ./jenkins_compose/jenkins_configuration:/var/jenkins_home
-        - /var/run/docker.sock:/var/run/docker.sock
 
     mongodb:
       image: mongo

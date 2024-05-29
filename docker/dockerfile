@@ -1,5 +1,5 @@
 # Define nossa imagem base
-FROM jenkins/jenkins:lts-jdk11
+FROM jenkins/jenkins
 
 # Cria uma variávei com o link para o maven
 ARG MAVEN_URL=https://dlcdn.apache.org/maven/maven-3/3.9.5/binaries/apache-maven-3.9.5-bin.tar.gz
@@ -29,6 +29,7 @@ RUN chown -R jenkins:jenkins /opt/maven
 
 # Instalando mailutils
 RUN apt-get install -y mailutils
+
 
 # Limpa arquivos baixados com apt-get
 RUN apt-get clean
