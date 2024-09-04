@@ -31,3 +31,5 @@ jobs:
       run: |
         pwd
         ls
+        cd Aula-GitHub-Actions
+        mvn clean install
