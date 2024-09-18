@@ -27,12 +27,19 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Tests with Maven
       run: |
         pwd
         ls
         cd Aula-GitHub-Actions
         mvn clean test site
+
+    - name: Upload artefatos
+      uses: actions/upload-artifact@v3
+      with:
+        name: relatorio-testes
+        path: Aula-GitHub-Action/target/site/
+
 
   build:
 
