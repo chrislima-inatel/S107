@@ -66,3 +66,13 @@ jobs:
       with:
         name: Pacote
         path: Aula-GitHub-Actions/target/*.jar
+
+
+  notification:
+    needs: build
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Executa scripts externos (versionados)
+        uses: actions/checkout@v4
+      - run: sh scripts/shell.sh
