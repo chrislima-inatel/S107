@@ -38,7 +38,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: relatorio-testes
-        path: Aula-GitHub-Action/target/site/
+        path: Aula-GitHub-Actions/target/site/
 
 
   build:
