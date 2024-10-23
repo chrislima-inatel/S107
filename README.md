@@ -50,6 +50,12 @@ Aqui estão algumas das principais opções e seus significados:
 -e <variável>=<valor>: Define variáveis de ambiente dentro do container.
 ```
 
+5. Parar uma imagem do docker:
+
+```
+docker stop <nome_ou_id_do_container>
+```
+
 6. Construir uma imagem docker com um dockerfile:
 
 ```
