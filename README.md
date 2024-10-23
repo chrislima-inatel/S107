@@ -34,19 +34,35 @@ docker image ls
 docker pull nome_da_imagem
 ```
 
-5. Construir uma imagem docker com um dockerfile:
+5. Rodar uma imagem do docker:
+
+```
+docker run [opções] <imagem> [comando] [argumentos]
+
+Aqui estão algumas das principais opções e seus significados:
+
+-d: Executa o container em segundo plano (modo detached).
+-it: Abre um terminal interativo (usado para executar comandos dentro do container).
+--name <nome>: Dá um nome ao container.
+-p <porta_host>:<porta_container>: Mapeia uma porta do host para uma porta do container.
+-v <caminho_host>:<caminho_container>: Monta um volume, ou seja, mapeia um diretório do host para um diretório dentro do container.
+--rm: Remove o container quando ele é parado.
+-e <variável>=<valor>: Define variáveis de ambiente dentro do container.
+```
+
+6. Construir uma imagem docker com um dockerfile:
 
 ```
 docker build --tag="tag_para_imagem" <diretorio_onde_se_encontra_o_dockerfile>
 ```
 
-6. Executar o container utilizando docker-compose
+7. Executar o container utilizando docker-compose
 
 ```
 docker-compose -f <arquivo_docker_compose> up
 ```
 
-6. Parar o container utilizando docker-compose
+8. Parar o container utilizando docker-compose
 
 ```
 docker-compose -f <arquivo_docker_compose> down
