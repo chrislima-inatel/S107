@@ -54,7 +54,14 @@ pipeline {
 
         }
 
+        stage('Install MongoDB Client') {
+            steps {
+                sh 'apt-get update && apt-get install -y mongodb-clients'
+            }
+        }
+
         stage('Write to MongoDB') {
+
             steps {
                 script {
                     // Comando para inserir um documento JSON no MongoDB
