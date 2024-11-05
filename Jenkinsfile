@@ -58,9 +58,10 @@ pipeline {
             steps {
                 script {
                     // Comando para inserir um documento JSON no MongoDB
+
                     sh """
                     mongo ${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE} --eval '
-                    db.${MONGO_COLLECTION}.insert({ name: "Jenkins", description: "Inserted from Jenkins Pipeline" });
+                    db.${MONGO_COLLECTION}.insert({ name: "Jenkins", description: "Inserindo do pipeline" });
                     '
                     """
                 }

@@ -11,6 +11,8 @@
        - 50000:50000
       volumes:
         - ./jenkins_compose/jenkins_configuration:/var/jenkins_home
+      networks:
+        - my_network
 
     mongodb:
       image: mongo
@@ -21,6 +23,8 @@
         MONGO_INITDB_ROOT_PASSWORD: root
       volumes:
         - /Users/user/Documents/mongodb:/data/db
+      networks:
+        - my_network
     
     mongo-express:
       image: mongo-express
@@ -31,6 +35,13 @@
         ME_CONFIG_MONGODB_ADMINUSERNAME: root
         ME_CONFIG_MONGODB_ADMINPASSWORD: root
         ME_CONFIG_MONGODB_SERVER: mongodb
+      networks:
+        - my_network
+
+
+  networks:
+    my_network:
+      driver: bridge
 
     # O código abaixo é usado para subir um outro container a partir de um dockerfile.
     # Mude o nome e porta para refletir seu ambiente.
