@@ -2,6 +2,13 @@ pipeline {
 
     agent any
 
+    environment {
+            MONGO_HOST = 'mongodb'
+            MONGO_PORT = '27017'
+            MONGO_DATABASE = 'my_database'
+            MONGO_COLLECTION = 'my_collection'
+    }
+
 
     stages {
 
@@ -46,6 +53,19 @@ pipeline {
                    '''
             }
 
+        }
+
+        stage('Write to MongoDB') {
+            steps {
+                script {
+                    // Comando para inserir um documento JSON no MongoDB
+                    sh """
+                    mongo ${MONGO_HOST}:${MONGO_PORT}/${MONGO_DATABASE} --eval '
+                    db.${MONGO_COLLECTION}.insert({ name: "Jenkins", description: "Inserted from Jenkins Pipeline" });
+                    '
+                    """
+                }
+            }
         }
 
     }
