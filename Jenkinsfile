@@ -56,7 +56,15 @@ pipeline {
 
         stage('Install MongoDB Client') {
             steps {
-                sh 'apt-get update && apt-get install -y mongodb-clients'
+                // Instalação do cliente MongoDB a partir do repositório oficial
+                sh '''
+                apt-get update &&
+                apt-get install -y gnupg &&
+                wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add - &&
+                echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(lsb_release -cs)/mongodb-org/4.4 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.4.list &&
+                apt-get update &&
+                apt-get install -y mongodb-org-shell
+                '''
             }
         }
 
