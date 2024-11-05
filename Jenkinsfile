@@ -39,7 +39,7 @@ pipeline {
                 sh '''
                    cd scripts
                    chmod 775 *
-                   shell.sh
+                   ./shell.sh
                    '''
             }
         }
