@@ -34,7 +34,7 @@ jobs:
         mvn clean install
 
     - name: Upload a Build Artifact (JAR)
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: arquivo jar
         path: Aula-GitHub-Actions/target/*.jar
@@ -60,7 +60,7 @@ jobs:
           
 
       - name: Upload a Test Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: relatorio-teste
           path: Aula-GitHub-Actions/target/site/
