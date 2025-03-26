@@ -80,11 +80,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Notification
-        run: |
-          cd Aula-GitHub-Actions
-          ls
-          echo "HAHAHAHAHHA"
-          pwd
-          
+        run: sh scripts/shell.sh
+
           
         
