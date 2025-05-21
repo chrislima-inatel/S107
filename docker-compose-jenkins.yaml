@@ -43,7 +43,7 @@
         context: ./docker_flask_api
       container_name: flask_api
       ports:
-        - "5000:5000"
+        - "6000:6000"
       restart: unless-stopped
 
 # Exemplo de criação de um network para os onctainers
