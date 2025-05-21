@@ -49,7 +49,7 @@ pipeline {
                     steps {
                         echo 'API test...'
                         sh '''
-                           curl http://flask_api2:6000
+                           curl http://flask_api:8000
                            '''
                     }
                 }

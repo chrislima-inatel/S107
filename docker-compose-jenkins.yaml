@@ -38,25 +38,10 @@
 #      networks:
 #        - my_network
 
-    api:
+    flask_api:
       build:
         context: ./docker_flask_api
-      container_name: flask_api2
+      container_name: flask_api
       ports:
-        - "6000:6000"
+        - "8000:8000"
       restart: unless-stopped
-
-# Exemplo de criação de um network para os onctainers
-#  networks:
-#    my_network:
-#      driver: bridge
-
-# O código abaixo é usado para subir um outro container a partir de um dockerfile.
-# Mude o nome e porta para refletir seu ambiente.
-
-# web:
-#   build:
-#     context: ./docker
-#     dockerfile: dockerfile
-#   ports:
-#     - "8082:8082"
