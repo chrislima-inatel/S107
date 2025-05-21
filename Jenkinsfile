@@ -43,32 +43,5 @@ pipeline {
                    '''
             }
         }
-
-        stage('Escrever na Collection do MongoDB') {
-            steps {
-                script {
-                    def insertResult = sh (
-                        script: '''
-                            docker exec jenkins mongo --host mongodb --username root --password root --authenticationDatabase admin <<EOF
-                            use teste_jenkins;
-                            db.logs.insertOne({
-                                mensagem: "Inserção feita pelo Jenkins em " + new Date(),
-                                status: "ok",
-                                etapa: "pipeline"
-                            });
-                            EOF
-                        ''',
-                        returnStatus: true
-                    )
-
-                    if (insertResult != 0) {
-                        error("Falha ao escrever no MongoDB")
-                    } else {
-                        echo "Documento inserido com sucesso no MongoDB"
-                    }
-                }
-            }
-        }
-
     }
 }
