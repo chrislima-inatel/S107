@@ -43,5 +43,15 @@ pipeline {
                    '''
             }
         }
+
+         stage('API test'){
+
+                    steps {
+                        echo 'API test...'
+                        sh '''
+                           curl http://flask_api:5000
+                           '''
+                    }
+                }
     }
 }
