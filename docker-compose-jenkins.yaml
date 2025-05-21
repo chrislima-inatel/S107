@@ -41,7 +41,7 @@
     api:
       build:
         context: ./docker_flask_api
-      container_name: flask_api
+      container_name: flask_api2
       ports:
         - "6000:6000"
       restart: unless-stopped
