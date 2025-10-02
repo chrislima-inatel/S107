@@ -30,6 +30,9 @@ pipeline {
                    '''
             }
 
+           archiveArtifacts 'Aula-GitHub-Actions/target/site/'
+
+
         }
 
         stage('Notification'){
