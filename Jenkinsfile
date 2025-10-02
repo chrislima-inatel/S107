@@ -28,10 +28,9 @@ pipeline {
                    cd Aula-GitHub-Actions
                    mvn clean test site
                    '''
+                archiveArtifacts 'Aula-GitHub-Actions/target/site/'
+
             }
-
-           archiveArtifacts 'Aula-GitHub-Actions/target/site/'
-
 
         }
 
