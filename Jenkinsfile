@@ -44,14 +44,15 @@ pipeline {
             }
         }
 
-         stage('API test'){
-
-                    steps {
-                        echo 'API test...'
-                        sh '''
-                           curl http://flask_api:8000
-                           '''
-                    }
-                }
+        // essa etapa só será executada quando fizermos utilização do docker-compose
+//          stage('API test'){
+//
+//                     steps {
+//                         echo 'API test...'
+//                         sh '''
+//                            curl http://flask_api:8000
+//                            '''
+//                     }
+//                 }
     }
 }
